@@ -24,21 +24,17 @@ ansible 2.9.6
 В проекте представлены файлы:
 
 •	INE Topology.pdf – топология разворачиваемого проекта.
-
 •	INE Topology default config.txt – файлы первоначальной настройки устройств для возможности подключения по SSH. 
-
 •	Файлы Ansible:
 
   o	Файлы конфигурации
   
     - ansible.cfg
-    
     - hosts.ini
     
   o	Playbooks
   
     - playbook_lab_basic_ip.yml – Плейбук для настройки первоначальных параметров устройств.
-    
     - playbook_lab_dmvpn.yml – Плейбук для настройки DMVPN на роутерах R1-5.
     
   o	Templays
