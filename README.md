@@ -3,6 +3,7 @@
 Схема сети с IP адресацией в файле INE Topology.pdf.
 
 Описание стенда:
+
 Для эмуляции сетевых устройств используется EVE-NG с образами:
 •	L2-15.1.bin 
 •	L3-15.5.2.bin
@@ -10,6 +11,7 @@
 Ansible развернут на отдельной Linux машине в среде VMware и подключен к лабораторной в EVE-NG через встроенный интерфейс pnet1(Cloud1\Network adapter 2; подбробнее про подключение на сайте EVE-NG в файле EVE-NG Community Cookbook). 
 
 Версия Ansible и Python:
+
 mint@mint-virtual-machine:~$  ansible --version
 ansible 2.9.6
 …
