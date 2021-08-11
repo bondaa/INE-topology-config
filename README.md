@@ -29,24 +29,24 @@ INE Topology default config.txt – файлы первоначальной на
 
 Файлы Ansible:
 
-  o	Файлы конфигурации
+Файлы конфигурации
   
     - ansible.cfg
     - hosts.ini
     
-  o	Playbooks
+Playbooks
   
     - playbook_lab_basic_ip.yml – Плейбук для настройки первоначальных параметров устройств.
     - playbook_lab_dmvpn.yml – Плейбук для настройки DMVPN на роутерах R1-5.
     
-  o	Templays
+Templays
   
     - basic.j2 – Настройка основных параметров устройств.
     - ip_addr.j2 – Настройка IP адресации устройств.
     - dmvpn_without_ipsec.j2 – Настройка DMVPN для роутеров R1-5 без IPSEC для возможности просмотра обмениваемыми сообщениями через WIRESHARK. 
     - dmvpn_with_ipsec.j2 – Настройка DMVPN для роутеров R1-5 с IPSEC.
     
-  o	Файлы переменных
+Файлы переменных
   
     - group_vars – общие переменные для устройств.
     - host_vars – переменные для конкретных устройств.
