@@ -1,5 +1,6 @@
 # INE-topology-config
 Проект используется для быстрого разворачивания лабораторной для отрабатывания навыков работы с сетевым оборудованием. 
+
 Схема сети с IP адресацией в файле INE Topology.pdf.
 
 Описание стенда:
@@ -8,7 +9,7 @@
 
 Устройства подключены согласно схеме в файле Physical topology.PNG. 
 
-Ansible развернут на отдельной Linux машине в среде VMware и подключен к лабораторной в EVE-NG через встроенный интерфейс pnet1(Cloud1\Network adapter 2; подбробнее про подключение на сайте EVE-NG в файле EVE-NG Community Cookbook). 
+Ansible развернут на отдельной Linux машине в среде VMware и подключен к лабораторной в EVE-NG через встроенный интерфейс pnet1(Cloud1\Network adapter 2; подробнее про подключение на сайте EVE-NG в EVE-NG Community Cookbook). 
 
 Версия Ansible и Python:
 
