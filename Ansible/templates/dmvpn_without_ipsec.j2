@@ -1,0 +1,31 @@
+{% if dmvpn_spoke %}
+interface Tunnel0
+ ip address 155.1.0.{{ r_number }} 255.255.255.0
+ no ip redirects
+ ip mtu 1400
+ ip nhrp authentication NHRPPASS
+ ip nhrp map 155.1.0.5 169.254.100.5
+ ip nhrp map multicast 169.254.100.5
+ ip nhrp network-id 1
+ ip nhrp nhs 155.1.0.5
+ ip nhrp shortcut
+ ip tcp adjust-mss 1360
+ tunnel source Ethernet0/0.100
+ tunnel mode gre multipoint
+ tunnel key 150
+{% endif %}
+
+{% if dmvpn_hub %}
+interface Tunnel0
+ ip address 155.1.0.{{ r_number }} 255.255.255.0
+ ip mtu 1400
+ no ip split-horizon eigrp 1
+ ip nhrp authentication NHRPPASS
+ ip nhrp map multicast dynamic
+ ip nhrp network-id 1
+ ip nhrp redirect
+ ip tcp adjust-mss 1360
+ tunnel source Ethernet0/0.100
+ tunnel mode gre multipoint
+ tunnel key 150
+{% endif %}

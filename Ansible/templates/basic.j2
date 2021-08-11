@@ -1,0 +1,10 @@
+hostname R{{ r_number }}
+ipv6 unicast-routing
+no ip domain lookup
+ip domain name {{ domain_name }}
+username {{ username }} password 0 {{ password }}
+line vty 0 4
+ exec-timeout 0 0
+ logging synchronous
+ login local
+ transport input all

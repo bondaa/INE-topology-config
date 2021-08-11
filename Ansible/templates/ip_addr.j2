@@ -1,0 +1,11 @@
+
+interface Loopback0
+ ipv6 address 2001:150:{{ r_number }}:{{ r_number }}::{{ r_number }}/128
+ ip address 150.1.{{ r_number }}.{{ r_number }} 255.255.255.255
+
+{% for sub, ip in int_e0_subs.items() %}
+interface Ethernet0/0.{{ sub }}
+ encapsulation dot1Q {{ sub }}
+ ip address {{ ip['ipv4'] }} 255.255.255.0
+ ipv6 address {{ ip['ipv6'] }}/64
+{% endfor %}

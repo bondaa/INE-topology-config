@@ -1,0 +1,15 @@
+---
+
+- name: Config DMVPN
+  hosts: lab-routers
+
+  tasks:
+#    - name: Config DMVPN with IPSEC
+#      ios_config:
+#        src: templates/dmvpn_with_ipsec.j2
+#        save_when: modified
+    
+    - name: Config DMVPN without IPSEC
+      ios_config:
+        src: templates/dmvpn_without_ipsec.j2
+        save_when: modified

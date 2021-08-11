@@ -1,0 +1,18 @@
+---
+
+- name: Basic and IP config
+  hosts: lab-routers
+
+  tasks:
+    - name: Config Basic
+      ios_config:
+        src: templates/basic.j2
+        save_when: modified
+        after: 
+          - no service config
+          - cdp run
+
+    - name: Config IP Basic
+      ios_config:
+        src: templates/ip_addr.j2
+        save_when: modified
